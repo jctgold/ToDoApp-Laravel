@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ToDoController;
 
+
 Route::get('/', [TodoController::class, 'index']);
 
 Route::get('delete/{task}', [TodoController::class, 'delete']);
