@@ -44,8 +44,7 @@
 
                             <a href="/delete/{{$task->id}}">
                                     <span class="material-icons-outlined flex-shrink-1 text-right">delete</span>
-                            </a>
-                                                
+                            </a>                              
                         </div>
 
                         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -58,7 +57,6 @@
                                         $('#task-cont-{{ $task->id }}').addClass("task-done");
                                     }
                                     else {
-
                                         $('#task-name-{{ $task->id }}').removeClass("striked");
                                         $('#task-cont-{{ $task->id }}').removeClass("task-done");
                                     } 
@@ -114,8 +112,7 @@
                                     </div>
                             </div>   
                         </div>
-                    </div>
-                       
+                    </div>           
                     @endforeach
                 @endif
 
@@ -126,8 +123,7 @@
                     @if (count($tasks) > 0)
                         <a href="clear-completed" class="text-right">Clear completed</a>   
                     @endif
-                </div>
-                
+                </div>   
             </div>
 
         </div>
