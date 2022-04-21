@@ -26,7 +26,7 @@ class TodoController extends Controller
         $data = request()->all();
 
         $task = new Task();
-        //On the left is the field name in DB and on the right is field name in Form/view
+
         $task->name = $data['name'];
         $task->status = 'pending';
         $task->save();
@@ -58,9 +58,6 @@ class TodoController extends Controller
     }
 
     public function updateStatus(Task $task) {
-
-        echo '<script>alert("Welcome to Geeks for Geeks")</script>';
-        
         
         try {
             $this->validate(request(), [
@@ -94,8 +91,6 @@ class TodoController extends Controller
     }
 
     public function clearCompleted(Task $task){
-
-        echo '<script>alert("Welcome to Geeks for Geeks")</script>';
 
         $tasks = Task::all();
 
