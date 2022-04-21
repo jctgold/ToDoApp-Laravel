@@ -9,9 +9,9 @@
             </div>
 
             <div class="task-container">
-
                 @include('common.errors')
 
+                <!-- Create New Task -->
                 <form action="create-task" method="POST" class="add-new-task">
                     @csrf
 
@@ -19,6 +19,7 @@
                     <input type="text" name="name" id="name" placeholder="Add new task">
                 </form>
 
+                <!-- Tasks List -->
                 <div class="task-list-container">
                 @if (count($tasks) > 0)
                     @foreach ($tasks as $task)
